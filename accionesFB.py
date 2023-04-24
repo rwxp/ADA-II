@@ -36,7 +36,7 @@ def accionesFB(A,B, n, ofertas):
         f.write(f'{max(vr)}\n')
         for item in vr_combination:
             f.write(f'{item}\n')
-    return "La función accionesFB ha sido ejecuta, diríjase a la carpeta accionesFB-output para ver la salida."
+    return f'{max(vr)}\n' + '\n'.join(str(item) for item in vr_combination)
 
 
 def calcular_valor(A, B, asignacion, ofertas):

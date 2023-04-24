@@ -37,5 +37,5 @@ def accionesPD1(A, B, n, offers):
         f.write(f'{costo}\n')
         for item in result:
             f.write(f'{item}\n')
-    return "La función accionesPD1 ha sido ejecuta, diríjase a la carpeta accionesPD1-output para ver la salida."
+    return f'{costo}\n' + '\n'.join(str(item) for item in result)
 
