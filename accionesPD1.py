@@ -22,14 +22,12 @@ def accionesPD1(A, B, n, offers):
     j = A
     #while que va desde 0 < i < n y 0 < j < A O(A*n)
     while i > 0 and j > 0:
-        #si la solución actual no cambia respecto a la anterior
         if dp[i][j] == dp[i - 1][j]:
             i -= 1
         else:
             p, c, r = offers[i - 1]
             k = min(c, j)
-            #escogemos un k que representa el num de acciones que cumple 
-            # con la restricción de min y hace parte de la solución óptima
+            # k que representa el num de acciones asignadas a cada oferta
             while k >= r and dp[i][j] != dp[i - 1][j - k] + k * p:
                 k -= 1
             result[i - 1] = k

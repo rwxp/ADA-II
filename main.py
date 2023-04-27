@@ -35,7 +35,8 @@ while True:
             if values['function'] == 'Programación dinámica 1':
                 result = accionesPD1(A,B, n, offers)
             elif values['function'] == 'Programación dinámica 2':
-                result = accionesPD2(A,B, n, offers)
+                M = int(lines[-1])
+                result = accionesPD2(A,B, n, M, offers)
             elif values['function'] == 'Fuerza Bruta':
                 result = accionesFB(A,B,n, offers)
             elif values['function'] == 'Voraz':

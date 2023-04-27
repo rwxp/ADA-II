@@ -1,13 +1,13 @@
 import os
-
-def accionesPD2(A, B, n, offers):
+# implementación similiar solo que A se divide en 5000
+def accionesPD2(A, B, n, M, offers):
     dp = [[-float('inf') for _ in range(A + 1)] for _ in range(n + 1)]
     dp[0][0] = 0
     for i in range(1, n + 1):
         p, c, r = offers[i - 1]
-        for j in range(0, A + 1,  5000):
+        for j in range(0, A + 1,  M):
             dp[i][j] = dp[i - 1][j]
-            for k in range(r, min(c, j) + 1, 5000):
+            for k in range(r, min(c, j) + 1, M):
                 dp[i][j] = max(dp[i][j], dp[i - 1][j - k] + k * p)
     result = [0] * n
     i = n

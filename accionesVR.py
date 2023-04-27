@@ -27,4 +27,4 @@ def programacion_voraz(A, B, n, ofertas):
         for item in asignacion:
             f.write(f'{item}\n')
     print("La funcion programacion_voraz ha sido ejecutada, dirijase a la carpeta accionesVR-output para ver la salida.")
-    return asignacion
+    return f'{ventas}\n' + '\n'.join(str(item) for item in asignacion)
