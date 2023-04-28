@@ -1,8 +1,8 @@
 import os
 
-def programacion_voraz(A, B, n, ofertas):
+def accionesVR(A, B, n, ofertas):
     # Inicializar asignación
-    asignacion = [0] * (n+1)
+    asignacion = [0] * (n)
 
     # Asignar recursos a las ofertas en orden descendente de tasa de valoración
     for oferta in ofertas:
